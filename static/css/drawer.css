@@ -372,7 +372,7 @@ ul.navigation {
 .navigation a:hover {
   background-color: #989898;
 }
-
+#cgmsimDrawer,
 #boluscalcDrawer {
     background-color: #666;
     border-left: 1px solid #999;
@@ -391,6 +391,7 @@ ul.navigation {
     z-index: 1;
 }
 
+#cgmsimDrawer a ,
 #boluscalcDrawer a {
   color: white;
   font-size: 12px;
@@ -404,10 +405,12 @@ ul.navigation {
     background: Sienna;
 }
 
+#cgmsimDrawer .border_bottom td ,
 #boluscalcDrawer .border_bottom td {
   border-bottom:1pt solid #eee;
 }
 
+#cgmsimDrawer .foodinput ,
 #boluscalcDrawer .foodinput {
    background: #505050;
    margin: 10px;
