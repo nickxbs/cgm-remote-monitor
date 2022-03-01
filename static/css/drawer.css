@@ -1,4 +1,7 @@
-#drawer button, #treatmentDrawer button, #boluscalcDrawer button{
+#drawer button, 
+#treatmentDrawer button, 
+#cgmsimDrawer button, 
+#boluscalcDrawer button{
   font-size: 18px;
   font-weight: bolder;
   background-color: #ccc;
@@ -26,11 +29,17 @@
   z-index: 1;
 }
 
-#drawer i, #treatmentDrawer i {
+#drawer i, 
+#treatmentDrawer i,
+#cgmsimDrawer i
+ {
   opacity: 0.6;
 }
 
-#drawer a, #treatmentDrawer a {
+#drawer a, 
+#treatmentDrawer a,
+#cgmsimDrawer a
+ {
   color: white;
 }
 
@@ -49,7 +58,7 @@ input[type=number]:invalid {
   text-decoration: underline;
 }
 
-#treatmentDrawer, #adminNotifiesDrawer {
+#treatmentDrawer, #adminNotifiesDrawer,#cgmsimDrawer {
   background-color: #666;
   border-left: 1px solid #999;
   box-shadow: inset 4px 4px 5px 0 rgba(50, 50, 50, 0.75);
@@ -79,16 +88,22 @@ input[type=number]:invalid {
   font-size: 11px;
 }
 
-#treatmentDrawer input {
+#treatmentDrawer input,
+#cgmsimDrawer input
+ {
   box-sizing: border-box;
 }
 
-#treatmentDrawer .left-column {
+#cgmsimDrawer .left-column,
+#treatmentDrawer .left-column
+ {
   display: block;
   width: 100%;
 }
 
-#treatmentDrawer .left-column span {
+#cgmsimDrawer .left-column span, 
+#treatmentDrawer .left-column span 
+{
   width: 110px;
   display: inline-block;
   white-space: nowrap;
@@ -98,15 +113,23 @@ input[type=number]:invalid {
   vertical-align: middle;
 }
 
-#treatmentDrawer fieldset fieldset .left-column span {
+#cgmsimDrawer fieldset fieldset .left-column span, 
+#treatmentDrawer fieldset fieldset .left-column span 
+{
   width: 96px;
 }
 
-#treatmentDrawer .left-column input, #treatmentDrawer .left-column select {
+#cgmsimDrawer .left-column input, 
+#cgmsimDrawer .left-column select, 
+#treatmentDrawer .left-column input, 
+#treatmentDrawer .left-column select 
+{
   width: 140px;
 }
 
-#treatmentDrawer .extra-space {
+#cgmsimDrawer .extra-space,
+#treatmentDrawer .extra-space
+ {
   padding-top: 10px;
   display: block;
 }

@@ -87,22 +87,35 @@
     }
 
     @-webkit-keyframes sk-bouncedelay {
-      0%, 80%, 100% { -webkit-transform: scale(0) }
-      40% { -webkit-transform: scale(1.0) }
+
+      0%,
+      80%,
+      100% {
+        -webkit-transform: scale(0)
+      }
+
+      40% {
+        -webkit-transform: scale(1.0)
+      }
     }
 
     @keyframes sk-bouncedelay {
-       0%, 80%, 100% { 
-         -webkit-transform: scale(0);
-         transform: scale(0);
-       } 40% { 
-         -webkit-transform: scale(1.0);
-         transform: scale(1.0);
+
+      0%,
+      80%,
+      100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+      }
     }
-}
 
   </style>
-      <%- include('preloadCSS')%>
+  <%- include('preloadCSS')%>
 </head>
 
 <body>
@@ -363,23 +376,23 @@
           </label>
         </fieldset>
         <label id="remoteCarbsLabel" for="remoteCarbs" class="left-column short-label">
-             <span class="translate">Carbs</span>
-             <input type="number" step="any" min="0" id="remoteCarbs" placeholder="Amount in grams" class="titletranslate" pattern="[0-9.,]*" />
-         </label>
-         <label id="remoteAbsorptionLabel" for="remoteAbsorption" class="left-column short-label">
-             <span class="translate">Absorption</span>
-             <input type="number" step="any" min="0" id="remoteAbsorption" placeholder="Time in hours" class="titletranslate" pattern="[0-9.,]*" />
-         </label>
-         <label id="remoteBolusLabel" for="remoteBolus" class="left-column short-label">
-             <span class="translate">Bolus</span>
-             <input type="number" step="any" min="0" id="remoteBolus" placeholder="Amount in units" class="titletranslate" pattern="[0-9.,]*" />
-         </label>
-         <label id="otpLabel" for="otp" class="left-column short-label">
-             <span class="translate">OTP</span>
-             <input type="text" id="otp" placeholder="password" class="titletranslate" />
-         </label>
+          <span class="translate">Carbs</span>
+          <input type="number" step="any" min="0" id="remoteCarbs" placeholder="Amount in grams" class="titletranslate" pattern="[0-9.,]*" />
+        </label>
+        <label id="remoteAbsorptionLabel" for="remoteAbsorption" class="left-column short-label">
+          <span class="translate">Absorption</span>
+          <input type="number" step="any" min="0" id="remoteAbsorption" placeholder="Time in hours" class="titletranslate" pattern="[0-9.,]*" />
+        </label>
+        <label id="remoteBolusLabel" for="remoteBolus" class="left-column short-label">
+          <span class="translate">Bolus</span>
+          <input type="number" step="any" min="0" id="remoteBolus" placeholder="Amount in units" class="titletranslate" pattern="[0-9.,]*" />
+        </label>
+        <label id="otpLabel" for="otp" class="left-column short-label">
+          <span class="translate">OTP</span>
+          <input type="text" id="otp" placeholder="password" class="titletranslate" />
+        </label>
 
-        <fieldset id="nutrition" >
+        <fieldset id="nutrition">
           <label id="carbsGivenLabel" for="carbsGiven" class="left-column short-label">
             <span class="translate">Carbs Given</span>
             <input type="number" step="any" min="0" id="carbsGiven" placeholder="Amount in grams" class="titletranslate" pattern="\d*">
@@ -480,11 +493,46 @@
   <div id="cgmsimDrawer">
     <form id="cgmsim-form">
       <fieldset class="cgmsimData">
-        <legend class="translate">Enable Cgmsim</legend>
+		<legend class="translate">Enable Cgmsim</legend>
+
+        <!-- ISF: 30, CR: 10, DIA: 6, WEIGHT: 90, TP: 75, CARBS_ABS_TIME: 360 -->
+        <label id="isfGivenLabel" for="isfGiven" class="left-column short-label">
+          <span class="translate">ISF</span>
+          <input type="number" step="any" min="0" id="isfGiven" placeholder="ISF" class="titletranslate" pattern="[0-9.,]*">
+        </label>
+
+        <label id="crGivenLabel" for="crGiven" class="left-column short-label">
+          <span class="translate">CR</span>
+          <input type="number" step="any" min="0" id="crGiven" placeholder="CR" class="titletranslate" pattern="[0-9.,]*">
+        </label>
+
+        <label id="diaGivenLabel" for="diaGiven" class="left-column short-label">
+          <span class="translate">DIA</span>
+          <input type="number" step="any" min="0" id="diaGiven" placeholder="DIA" class="titletranslate" pattern="[0-9.,]*">
+        </label>
+
+        <label id="weightGivenLabel" for="weightGiven" class="left-column short-label">
+          <span class="translate">Weight Given</span>
+          <input type="number" step="any" min="0" id="weightGiven" placeholder="Weight" class="titletranslate" pattern="[0-9.,]*">
+        </label>
+
+        <label id="tpGivenLabel" for="tpGiven" class="left-column short-label">
+          <span class="translate">TP</span>
+          <input type="number" step="any" min="0" id="tpGiven" placeholder="TP" class="titletranslate" pattern="[0-9.,]*">
+        </label>
+
+        <label id="catGivenLabel" for="catGiven" class="left-column short-label">
+          <span class="translate">Carb abs time</span>
+          <input type="number" step="any" min="0" id="catGiven" placeholder="Carb asb time" class="titletranslate" pattern="[0-9.,]*">
+        </label>
+
         <label for="enambeCgmsim" class="left-column">
-          <span class="translate">Enable/disable</span>
-		  <button type="button" id="enambeCgmsim" class="translate">Submit Form</button>
-		</label>
+          <button type="button" id="enableCgmsim" class="translate">Enable</button>
+        </label>
+		<label for="enambeCgmsim" class="left-column">
+			<button type="button" id="disableCgmsim" class="translate">Disable</button>
+		  </label>
+  
       </fieldset>
     </form>
   </div>
