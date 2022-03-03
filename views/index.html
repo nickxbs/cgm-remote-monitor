@@ -493,7 +493,7 @@
   <div id="cgmsimDrawer">
     <form id="cgmsim-form">
       <fieldset class="cgmsimData">
-		<legend class="translate">Cgmsim Settings</legend>
+        <legend class="translate">Cgmsim Settings</legend>
 
         <!-- ISF: 30, CR: 10, DIA: 6, WEIGHT: 90, TP: 75, CARBS_ABS_TIME: 360 -->
         <label id="isfGivenLabel" for="isfGiven" class="left-column short-label">
@@ -526,13 +526,29 @@
           <input type="number" step="any" min="0" id="catGiven" placeholder="Carb asb time" class="titletranslate" pattern="[0-9.,]*">
         </label>
 
-        <label for="enambeCgmsim" class="left-column">
-          <button type="button" id="enableCgmsim" class="translate">Enable</button>
-        </label>
-		<label for="enambeCgmsim" class="left-column">
-			<button type="button" id="disableCgmsim" class="translate">Disable</button>
+        <label id="pumpEnabledGivenLabel" for="pumpEnabledGiven" class="left-column short-label">
+			<span class="translate">Pump Enabled</span>
+			<input type="checkbox" id="pumpEnabledGiven" placeholder="Pump enabled">
 		  </label>
   
+		  <label id="surpriseEnabledGivenLabel" for="surpriseEnabledGiven" class="left-column short-label">
+			<span class="translate">Surprise Enabled</span>
+			<input type="checkbox" id="surpriseEnabledGiven" placeholder="Surprise enabled" class="titletranslate">
+		  </label>
+
+		  <label id="planetEnabledGivenLabel" for="planetEnabledGiven" class="left-column short-label">
+			<span class="translate">Planet Enabled</span>
+			<input type="checkbox" id="planetEnabledGiven" placeholder="Planet enabled" class="titletranslate">
+		  </label>
+  
+
+			<label for="enambeCgmsim" class="left-column">
+          <button type="button" id="enableCgmsim" class="translate">Enable</button>
+        </label>
+        <label for="enambeCgmsim" class="left-column">
+          <button type="button" id="disableCgmsim" class="translate">Disable</button>
+        </label>
+
       </fieldset>
     </form>
   </div>
