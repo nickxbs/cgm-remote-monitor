@@ -17,8 +17,10 @@ $(document).ready(function () {
 			event.origin.endsWith('cgmsim.com')
 		) {
 			if (event.data.type === 'SET_STORAGE') {
-				localStorage.setItem(event.data.key, event.data.value);
-				console.log(`Set ${event.data.key} = ${event.data.value}`);
+				event.data.values.forEach((e) => {
+					localStorage.setItem(e.key, e.value);
+					console.log(`Set ${e.key} = ${e.value}`);
+				});
 
 				// Reload the page after setting storage
 				window.location.reload();
